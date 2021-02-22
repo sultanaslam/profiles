@@ -1,0 +1,5 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "/Users/sultanaslam/.local/share/virtualenvs/django-todo-FYbk2aRG/bin/python"
+}
