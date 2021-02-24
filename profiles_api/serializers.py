@@ -10,7 +10,6 @@ class HelloSerializers(serializers.Serializer):
 
 class UserProfileSerializer(serializers.ModelSerializer):
 
-
     class Meta:
         model = models.UserProfile
         fields = ('id', 'name', 'email', 'password')
@@ -26,3 +25,11 @@ class UserProfileSerializer(serializers.ModelSerializer):
             password=validated_data['password'],
         )
         return user
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.ProfileFeedItem
+        fields = ('id', 'user_profile', 'status_text', 'create_on')
+        extra_kwargs = {'user_profile': {'read_only': True}}
